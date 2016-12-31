@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    transition: all linear .1s;
+    -webkit-transition: all linear .1s;
+}
+
+@grey: #c3c3c3;
+html,
+body {
+    min-height: 100%;
+    font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+html {
+    background-color: #eee;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+button{
+    outline: 0;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#main {
+    min-height: 100%;
+}
+
+.index {
+    padding-bottom: 1rem;
+    min-height: 100%;
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid @grey;
+    background-color: white;
+    ul.nav {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-size: 0;
+        li {
+            display: inline-block;
+            width: 33.33%;
+            height: 100%;
+            font-size: 0;
+            &:nth-child(1) {
+                a {
+                    background-image: url('../img/k.png');
+                    &.active {
+                        background-image: url('../img/k-a.png');
+                    }
+                }
+            }
+            &:nth-child(2) {
+                a {
+                    background-image: url('../img/d.png');
+                    &.active {
+                        background-image: url('../img/d-a.png');
+                    }
+                }
+            }
+            &:nth-child(3) {
+                a {
+                    background-image: url('../img/my.png');
+                    &.active {
+                        background-image: url('../img/my-a.png');
+                    }
+                }
+            }
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding-top: .58rem;
+                padding-bottom: .05rem;
+                text-align: center;
+                color: #888;
+                font-size: .24rem;
+                text-decoration: none;
+                &.active {
+                    color: red;
+                }
+                background-position: center .06rem;
+                background-repeat: no-repeat;
+                background-size:.48rem .48rem;
+                img {
+                    width: .48rem;
+                    height: .48rem;
+                }
+            }
+        }
+    }
+}
+
+//路由切换动画
+.transitionWrapper-enter{
+    opacity: 0.01;
+    //transform: scale(.1);
+    transition: all 160ms ease-in;
+}
+ 
+.transitionWrapper-enter.transitionWrapper-enter-active{
+    opacity: 1;
+    //transform: scale(1);
+}
+ 
+.transitionWrapper-leave{
+    opacity: 1;
+    //transform: scale(1);
+    transition: all 160ms ease-in;
+}
+ 
+.transitionWrapper-leave.transitionWrapper-leave-active{
+    opacity: 0;
+    //transform: scale(0);
+}
+ 
+.transitionWrapper{
+    position: relative;
+}

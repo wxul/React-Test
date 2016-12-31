@@ -1,0 +1,363 @@
+//我的信息
+.my-info {
+    .linklist-box {
+        margin-top: .2rem;
+    }
+    .user-head {
+        background-color: #2c2c3e;
+        a {
+            display: block;
+            padding: .4rem .3rem;
+            background: url('../img/icon-arr-w.png') no-repeat right .3rem center;
+            background-size: .16rem auto;
+            font-size: 0;
+            .avator {
+                display: inline-block;
+                margin-right: .32rem;
+                vertical-align: middle;
+                width: 1rem;
+                height: 1rem;
+                //圆角
+                border-radius: 1rem;
+                overflow: hidden;
+            }
+            .info {
+                display: inline-block;
+                vertical-align: middle;
+                width: 5rem;
+                color: white;
+                .username {
+                    font-size: .32rem;
+                    line-height: .58rem;
+                }
+                .phone {
+                    font-size: .22rem;
+                    line-height: .48rem;
+                }
+                .gender {
+                    width: .24rem;
+                    margin-left: .2rem;
+                }
+            }
+        }
+    }
+}
+
+//常见问题
+.questions.tab-menu {}
+
+//充值
+.payment {
+    .tip {
+        padding: 0 .3rem;
+        font-size: .28rem;
+        color: #666;
+    }
+    
+}
+
+//钱包
+.wallet {
+    .wallet-head {
+        background-color: #2c2c3e;
+        padding: .44rem;
+        text-align: center;
+        .title {
+            margin: 0;
+            line-height: .48rem;
+            font-size: .32rem;
+            color: white;
+        }
+        .money {
+            margin: 0;
+            font-size: .57rem;
+            color: #ed4b39;
+        }
+    }
+    .linklist-box {
+        margin-top: .1rem;
+    }
+}
+
+//银行卡
+.cards {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            margin-top: .2rem;
+            a {
+                display: block;
+                width: 6.9rem;
+                height: 2rem;
+                margin: 0 auto;
+                background-color: #ccc;
+                border-radius: .16rem;
+            }
+        }
+    }
+    a.add {
+        display: block;
+        width: 6.9rem;
+        margin: .3rem auto;
+        text-align: center;
+        font-size: .28rem;
+        color: #ed4b39;
+        line-height: .8rem;
+        border: 1px dashed #999;
+        border-radius: .16rem;
+        background-color: white;
+    }
+}
+
+//添加银行卡
+.addCard {
+    form {
+        input[type='text'] {
+            width: 5rem;
+        }
+    }
+}
+
+//明细列表
+.payinfo {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin-top: .2rem;
+            a {
+                display: block;
+                background-color: white;
+                padding: .28rem .3rem;
+                p {
+                    margin: 0;
+                    &.title {
+                        font-size: .36rem;
+                        color: #333;
+                        time {
+                            float: right;
+                            font-size: .24rem;
+                            color: #666;
+                            padding-top: .14rem;
+                        }
+                    }
+                    &.content {
+                        font-size: 0;
+                        margin-top: .16rem;
+                        .in {
+                            font-size: .53rem;
+                            color: #ec422f;
+                        }
+                        .out {
+                            font-size: .53rem;
+                            color: #22aa22;
+                        }
+                        .bc {
+                            float: right;
+                            font-size: .32rem;
+                            color: #666;
+                            padding-top: .18rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//明细
+.payinfodetail {
+    .status {
+        margin-top: .2rem;
+        padding: .37rem .3rem;
+        background-color: white;
+        .type {
+            margin: 0 0 .18rem;
+            font-size: .36rem;
+            color: #666;
+        }
+        .info {
+            margin: 0;
+            font-size: .53rem;
+            color: #333;
+            span {
+                padding-top: .18rem;
+                font-size: .32rem;
+                color: #ed4b39;
+                float: right;
+            }
+        }
+    }
+    .details {
+        margin-top: .2rem;
+        background-color: white;
+        font-size: .32rem;
+        line-height: .48rem;
+        color: #666;
+        .section {
+            padding: .2rem .3rem;
+            &:first-child {
+                border-bottom: 1px solid #ccc;
+            }
+            .fr {
+                float: right;
+            }
+        }
+    }
+}
+
+//选择银行卡
+.selectbank {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 123;
+    background-color: rgba(0, 0, 0, .7);
+    opacity: 1;
+    visibility: visible;
+    transition: all linear .2s;
+    -webkit-transition: all linear .2s;
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+        .content {
+            transform: translate3d(0, 100%, 0);
+            -webkit-transform: translate3d(0, 100%, 0);
+        }
+    }
+    .content {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        overflow: hidden;
+        transition: all linear .2s;
+        -webkit-transition: all linear .2s;
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        .title {
+            margin: 0;
+            text-align: center;
+            font-size: .36rem;
+            color: #333;
+            font-weight: normal;
+            padding: .3rem;
+            border-bottom: 1px solid #e3e3e3;
+            .img {
+                float: left;
+                width: .5rem;
+                margin-top: -.05rem;
+            }
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            padding-bottom: 2rem;
+            margin: 0;
+            li {
+                padding: .2rem .3rem;
+                border-bottom: 1px solid #e3e3e3;
+                a {
+                    display: block;
+                    padding-left: .6rem;
+                    background-position: 0 center;
+                    background-repeat: no-repeat;
+                    background-size: .6rem .6rem;
+                    &.cmb {
+                        background-image: url('../img/icon-setting.png');
+                    }
+                }
+                p {
+                    margin: 0;
+                    font-size: .32rem;
+                    color: #333;
+                    line-height: .5rem;
+                    text-align: left;
+                    &.tip2 {
+                        font-size: .28rem;
+                        color: #666;
+                        line-height: .4rem;
+                    }
+                }
+                background-position: right .3rem center;
+                background-repeat: no-repeat;
+                background-size: .4rem .4rem;
+                &.active {
+                    background-image: url("../img/icon-right.png");
+                    background-color: #feebeb;
+                }
+                &.last {
+                    background: url("../img/icon-arr-b.png") right .3rem center no-repeat;
+                    background-size: auto .4rem;
+                    font-size: .32rem;
+                    color: #333;
+                    text-align: left;
+                    line-height: .9rem;
+                }
+            }
+        }
+    }
+}
+
+//支付结果
+.payresult {
+    text-align: center;
+    .img {
+        padding: .77rem 0 .3rem;
+    }
+    .resulttype {
+        margin: 0;
+        font-size: .32rem;
+        color: #333;
+    }
+    .tip3 {
+        margin: 0;
+        font-size: .24rem;
+        color: #888;
+    }
+    button {
+        display: block;
+        border: 0;
+        width: 6.9rem;
+        margin: .7rem auto 0;
+        text-align: center;
+        color: white;
+        font-size: .36rem;
+        line-height: .88rem;
+        background-color: #ed4b39;
+        border-radius: .12rem;
+    }
+}
+
+//设置
+.settings{
+    margin-top: .2rem;
+}
+
+//提现
+.cash{
+    form{
+        margin-top: .2rem;
+
+        button[type='submit']{
+            background-color: #ed4b39;
+        }
+    }
+}
+
+//设置密码
+.setpwd{
+    margin-top: .2rem;
+}
+
+//修改手机号码
+.setphone{
+    margin-top: .2rem;
+}
